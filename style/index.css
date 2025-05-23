@@ -19,6 +19,11 @@
     font-family: "Archivo";
 }
 
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+}
+
 /*Definição dos textos*/
 h1{
     font-size: 24px;
@@ -39,11 +44,59 @@ span{
     font-size: 14px;
     font-weight: 600;
     line-height: 145%;
+    color: var(--text-color-secundary);
 }
 p{
     font-size: 14px;
     font-weight: 400;
     line-height: 160%;
+    color: var(--text-color-secundary);
+}
+
+/*Classes básicas*/
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    max-width: 1280px;
+    width: 100vw;
+    padding: 0 32px;
 }
 
 /*Header*/
+header{
+    flex-direction: column;
+}
+.navbar-primary{
+    padding: 20px 0;
+}
+.navbar-primary ul{
+    list-style: none;
+    justify-content: space-between;
+}
+.navbar-primary h1{
+    color: var(--brand-color-light);
+}
+.navbar-primary ul li label{
+    gap: 10px;
+}
+.navbar-primary ul li label input[type="search"]{
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    color: var(--text-color-primary);
+    font-size: 16px;
+    width: 200px;
+}
+.navbar-primary ul li label input[type="search"]:focus{
+    border-bottom: 1px solid var(--brand-color-light);
+}
+.navbar-primary ul li label input[type="search"]::placeholder{
+    color: var(--text-color-primary);
+    text-align: right;
+}
+.navbar-primary ul li label input[type="search"]:focus::placeholder{
+    color: transparent;
+}
