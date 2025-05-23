@@ -62,7 +62,8 @@ p{
 .content{
     max-width: 1280px;
     width: 100vw;
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 /*Header*/
@@ -70,7 +71,8 @@ header{
     flex-direction: column;
 }
 .navbar-primary{
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .navbar-primary ul{
     list-style: none;
@@ -81,22 +83,59 @@ header{
 }
 .navbar-primary ul li label{
     gap: 10px;
+    width: 100px;
+    cursor: pointer;
 }
-.navbar-primary ul li label input[type="search"]{
+#search:checked ~ .search{
+    display: flex;
+}
+.search{
+    display: none;
+    position: absolute;
+    right: calc(50% - 150px);
+    top: 18px;
+    width: 300px;
+}
+.search input{
+    width: 100%;
     outline: 0;
-    background-color: transparent;
     border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--brand-color-light);
     color: var(--text-color-primary);
-    font-size: 16px;
-    width: 200px;
+    box-shadow: 2px 2px 10px #000;
 }
-.navbar-primary ul li label input[type="search"]:focus{
-    border-bottom: 1px solid var(--brand-color-light);
+hr{
+    width: 100vw;
+    border: none;
+    border-bottom: 1px solid var(--stroke-color);
 }
-.navbar-primary ul li label input[type="search"]::placeholder{
-    color: var(--text-color-primary);
-    text-align: right;
+.navbar-secundary{
+    overflow: scroll;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    
 }
-.navbar-primary ul li label input[type="search"]:focus::placeholder{
-    color: transparent;
+.navbar-secundary::-webkit-scrollbar{
+    display: none;
+}
+.slider{
+    justify-content: space-between;
+    min-width: 700px;
+    width: 100%;
+}
+
+/*Responsividade*/
+@media (max-width: 760px){
+    .content{
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .cell{
+        display: none;
+    }
+    .navbar-primary ul li label{
+        width: auto;
+    }
 }

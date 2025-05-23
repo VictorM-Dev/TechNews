@@ -20,21 +20,37 @@
                     <input type="checkbox" name="menu" id="menu" hidden/>
                     <label for="menu" class="center">
                         <img src="images/svg/List.svg" alt="Ícone de menu"/>
-                        <h2>Menu</h2>
+                        <h2 class="cell">Menu</h2>
                     </label>
                 </li>
                 <li><h1>TECH NEWS</h1></li>
-                <li>
-                    <label class="center">
-                        <input type="search" name="search" id="search" placeholder="Buscar"/>
+                <li class="lupa">
+                    <input type="checkbox" name="search" id="search" hidden/>
+                    <label class="center" for="search">
+                        <h2 class="cell">Buscar</h2>        
                         <img src="images/svg/lupa.svg">
                     </label>
+                    <div class="search">
+                        <input type="search" name="lupa" id="lupa"/>
+                    </div>
                 </li>
             </ul>
         </div>
+        <hr/>
         <div class="navbar-secundary content">
-
+            <div class="slider center">
+                <span>Inteligência Artificial</span>
+                <span>Blockchain</span>
+                <span>Hologramas</span>
+                <span>Internet</span>
+                <span>Vestíveis</span>
+                <span>Realidade Aumentada</span>
+            </div>
         </div>
+        <hr/>
     </header>
+
+    <!--Script JS-->
+    <script src="script/index.js"></script>
 </body>
 </html>
