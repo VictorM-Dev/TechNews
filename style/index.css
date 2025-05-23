@@ -1,0 +1,49 @@
+:root{
+    /*Produto*/
+    --brand-color-light: #60a5fa;
+    --brand-color-dark: #1d4ed8;
+
+    /*Base*/
+    --bg-color: #0f172a;
+    --stroke-color: #1e293b;
+
+    /*Textos*/
+    --text-color-primary: #f1f5ff;
+    --text-color-secundary: #cbd5e1;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo";
+}
+
+/*Definição dos textos*/
+h1{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 135%;
+}
+h2{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 140%;
+}
+h3{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 140%;
+}
+span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 145%;
+}
+p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+/*Header*/
