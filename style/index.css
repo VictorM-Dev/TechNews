@@ -184,23 +184,29 @@ hr{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.elipse2{
+    -webkit-line-clamp: 2;
+}
+.elipse4{
+    -webkit-line-clamp: 4;
+}
 /*Section 2*/
 .section2{
     flex-direction: column;
     margin: 4rem 0;
 }
-.section2-header{
+.section-header{
     border-top: 1px solid var(--stroke-color);
     padding-top: 15px;
     margin-bottom: 15px;
 }
-.section2-header ul{
+.section-header ul{
     display: flex;
     list-style: none;
     justify-content: space-between;
     align-items: center;
 }
-.section2-header ul li{
+.section-header ul li{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,10 +222,52 @@ hr{
     left: 8px;
 }
 .card2-text{
-    width: 292px;
+    max-width: 292px;
+    padding-left: 5px;
+}
+/*Section3*/
+.section3{
+    margin: 4rem 0;
+}
+.section3-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.section3-left{
+    width: 100%;
+    min-width: 300px;
+    max-width: 696px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.section3-right{
+    min-width: 300px;
+    max-width: 488px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.textcard,
+.text2card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+/*Footer*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 4rem 0;
 }
 /*Responsividade*/
-@media (max-width: 650px){
+@media (max-width: 660px){
     .content{
         padding-left: 14px;
         padding-right: 14px;
@@ -232,5 +280,17 @@ hr{
     }
     .card2-text{
         width: 328px;
+    }
+    .section3-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .textcard{
+        flex-direction: row-reverse;
+        align-items: start;
+    }
+    .section3-left,
+    .section3-right{
+        max-width: 328px;
     }
 }
